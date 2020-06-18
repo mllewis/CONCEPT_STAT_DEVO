@@ -2,9 +2,9 @@ Concept learning from distributional statistics in development
 
 Project collaborators: Erin Campbell, Martin Zettersten, Molly Lewis
 
-===
 
-<!-- CITATION [[preprint]](writeup/journal/iat_lang.pdf) [[source]](writeup/journal/iat_lang.Rmd) [[supplemental materials]](https://mollylewis.shinyapps.io/iatlang_SI/). -->
+
+<!-- ===CITATION [[preprint]](writeup/journal/iat_lang.pdf) [[source]](writeup/journal/iat_lang.Rmd) [[supplemental materials]](https://mollylewis.shinyapps.io/iatlang_SI/). -->
 
 <!-- 
 In this project,... 

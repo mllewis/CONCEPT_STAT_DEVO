@@ -1,0 +1,226 @@
+---
+title: Predicting NextKids embeddings from language statistics
+author: Molly Lewis 
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    theme: cerulean
+    toc_float: false
+    code_folding: hide
+---
+  
+******
+
+```{r setup, include = F}
+# load packages
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(here)
+library(broom)
+library(data.table)
+
+opts_chunk$set(echo = T, message = F, warning = F, 
+               error = F, tidy = F, cache = F)
+```
+
+This is data  Martin Zettersten,Clint Jensen, and I collected from a sample of 60 kids. There are 16 animals.
+
+
+```{r}
+LABELS_PATH <- here("data/next_kids_pilot/labels.txt")
+YOUNG_PATH <- here("data/next_kids_pilot/model_34.csv")
+MID_PATH <- here("data/next_kids_pilot/model_56.csv")
+OLD_PATH <- here("data/next_kids_pilot/model_78.csv")
+ADULT_PATH <- here("data/next_kids_pilot/model_adults.csv")
+
+labs <- read.table(LABELS_PATH, header = FALSE) %>%
+      rename(item = V1) %>%
+      mutate(item = lapply(str_split(item, ".jpg"), 
+                                   function(x) {x[1]})) %>%
+  pull(item) %>%
+  unlist()
+
+young <- read_csv(YOUNG_PATH, col_names = F) %>%
+  mutate(group = "young",
+         item = labs)
+middle  <- read_csv(MID_PATH,col_names = F) %>%
+  mutate(group = "middle",
+         item = labs)
+old  <- read_csv(OLD_PATH, col_names = F) %>%
+  mutate(group = "old",
+         item = labs)
+adult <- read_csv(ADULT_PATH, col_names = F) %>%
+  mutate(group = "adult",
+         item = labs)
+
+full_dataset <-bind_rows(young, middle) %>%
+  bind_rows(old) %>%
+  bind_rows(adult)  %>%
+  nest(-group)
+
+
+get_pairwise_distance <- function(df){
+  
+  item_df <- df %>%
+    select(item) %>%
+    mutate(item1 = 1:n(),
+           item2 = 1:n())
+  
+   d1 <- dist(df, method = "euclidean") %>%
+    tidy() %>%
+    mutate(method = "euclidean")
+   
+  d2 <- dist(df, method = "manhattan") %>%
+    tidy() %>%
+    mutate(method = "manhattan")
+  
+  d3 <- dist(df, method = "minkowski") %>%
+    tidy() %>%
+    mutate(method = "minkowski")
+  
+  d4 <- dist(df, method = "canberra") %>%
+    tidy() %>%
+    mutate(method = "canberra")
+   
+   
+   list(d1, d2, d3, d4) %>%
+     reduce(bind_rows) %>%
+     bind_rows() %>%
+     left_join(item_df %>% select(-item2), by = "item1") %>%
+     left_join(item_df %>% select(-item1), by = "item2") %>%
+     select(item.x, item.y, distance, method)
+}
+
+behavioral_pairwise_dists <- full_dataset %>%
+  mutate(temp = map(data, get_pairwise_distance)) %>%
+  select(-data) %>%
+  unnest()
+```
+
+## Wiki
+```{r}
+ANIMAL_DISTACES_LANG <-  here("data/next_kids_pilot/next_animal_distances.csv")
+long_word_word_dists <- read_csv(ANIMAL_DISTACES_LANG)
+```
+
+
+```{r}
+all_word_pairs <- long_word_word_dists  %>%
+  full_join(behavioral_pairwise_dists) %>%
+  filter(!is.na(method))
+
+all_word_pairs_corrs <- all_word_pairs %>%
+  group_by(group, method) %>%
+  nest() %>%
+  mutate(temp = map(data, ~cor.test(.$language_similarity, .$distance) %>% tidy())) %>%
+  select(-data) %>%
+  unnest() %>%
+  ungroup()
+
+all_word_pairs_corrs %>%
+  mutate(group = fct_relevel(group, "young", "middle", "old"), 
+         sig = case_when(p.value < .05 ~ "sig",
+                         TRUE ~ "nsig")) %>%
+  ggplot(aes(x = group, y = estimate, shape = sig, group = method)) +
+      geom_line(color = "black") + 
+      geom_hline(aes(yintercept = 0), linetype = 2) +
+      geom_pointrange( aes(ymin = conf.low, ymax = conf.high)) +
+      facet_wrap(~method) +
+      theme_classic()
+```
+
+### by animal type
+```{r}
+BIRDS <- c("bird", "duck", "ostrich", "owl", "peacock", "penguin", "rooster", "swan")
+item_types <- all_word_pairs %>%
+  distinct(item.x, item.y) %>%
+  mutate(item_type1 = case_when(item.x %in% BIRDS ~ "bird",
+                                TRUE ~ "mammal"),
+         item_type2 = case_when(item.y %in% BIRDS ~ "bird",
+                                TRUE ~ "mammal")) %>%
+  filter(item_type1 ==item_type2) %>%
+  select(-item_type2) %>%
+  rename(item_type = item_type1)
+
+all_word_pairs_corrs <- all_word_pairs %>%
+  inner_join(item_types) %>%
+  group_by(group, method, item_type) %>%
+  nest() %>%
+  mutate(temp = map(data, ~cor.test(.$language_similarity, .$distance) %>% tidy())) %>%
+  select(-data) %>%
+  unnest() %>%
+  ungroup()
+
+all_word_pairs_corrs %>%
+  mutate(group = fct_relevel(group, "young", "middle", "old"), 
+         sig = case_when(p.value < .05 ~ "sig",
+                         TRUE ~ "nsig")) %>%
+  ggplot(aes(x = group, y = estimate, color = item_type, group = item_type, shape = sig)) +
+      geom_line() + 
+      geom_hline(aes(yintercept = 0), linetype = 2) +
+      geom_pointrange( aes(ymin = conf.low, ymax = conf.high)) +
+      facet_wrap(~method) +
+      theme_classic()
+
+```
+
+
+## Kidbook corpus
+```{r}
+ANIMAL_DISTACES_LANG_KID <-  here("data/next_kids_pilot/next_animal_distances_kid.csv")
+long_word_word_dists_kid <- read_csv(ANIMAL_DISTACES_LANG_KID)
+```
+
+
+```{r}
+all_word_pairs <- long_word_word_dists_kid  %>%
+  full_join(behavioral_pairwise_dists) %>%
+  filter(!is.na(method))
+
+all_word_pairs_corrs <- all_word_pairs %>%
+  group_by(group, method) %>%
+  nest() %>%
+  mutate(temp = map(data, ~cor.test(.$language_similarity, .$distance) %>% tidy())) %>%
+  select(-data) %>%
+  unnest() %>%
+  ungroup()
+
+all_word_pairs_corrs %>%
+  mutate(group = fct_relevel(group, "young", "middle", "old"), 
+         sig = case_when(p.value < .05 ~ "sig",
+                         TRUE ~ "nsig")) %>%
+  ggplot(aes(x = group, y = estimate, shape = sig, group = method)) +
+      geom_line(color = "black") + 
+      geom_hline(aes(yintercept = 0), linetype = 2) +
+      geom_pointrange( aes(ymin = conf.low, ymax = conf.high)) +
+      facet_wrap(~method) +
+      theme_classic()
+```
+
+### by animal type
+```{r}
+all_word_pairs_corrs <- all_word_pairs %>%
+  inner_join(item_types) %>%
+  group_by(group, method, item_type) %>%
+  nest() %>%
+  mutate(temp = map(data, ~cor.test(.$language_similarity, .$distance) %>% tidy())) %>%
+  select(-data) %>%
+  unnest() %>%
+  ungroup()
+
+all_word_pairs_corrs %>%
+  mutate(group = fct_relevel(group, "young", "middle", "old"), 
+         sig = case_when(p.value < .05 ~ "sig",
+                         TRUE ~ "nsig")) %>%
+  ggplot(aes(x = group, y = estimate, color = item_type, group = item_type, shape = sig)) +
+      geom_line() + 
+      geom_hline(aes(yintercept = 0), linetype = 2) +
+      geom_pointrange( aes(ymin = conf.low, ymax = conf.high)) +
+      facet_wrap(~method) +
+      theme_classic()
+
+```
+

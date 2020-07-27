@@ -1,0 +1,46 @@
+pair,within_domain
+sandwich_pasta,same domain + group
+sandwich_rice,same domain + group
+sandwich_corn,same domain + group
+sandwich_pizza,same domain + group
+sandwich_waffle,same domain
+sandwich_bagel,same domain
+sandwich_toast,same domain
+sandwich_cereal,same domain
+sandwich_muffin,same domain
+pasta_rice,same domain + group
+pasta_corn,same domain + group
+pasta_pizza,same domain + group
+pasta_waffle,same domain
+pasta_bagel,same domain
+pasta_toast,same domain
+pasta_cereal,same domain
+pasta_muffin,same domain
+rice_corn,same domain + group
+rice_pizza,same domain + group
+rice_waffle,same domain
+rice_bagel,same domain
+rice_toast,same domain
+rice_cereal,same domain
+rice_muffin,same domain
+corn_pizza,same domain + group
+corn_waffle,same domain
+corn_bagel,same domain
+corn_toast,same domain
+corn_cereal,same domain
+corn_muffin,same domain
+pizza_waffle,same domain
+pizza_bagel,same domain
+pizza_toast,same domain
+pizza_cereal,same domain
+pizza_muffin,same domain
+waffle_bagel,same domain + group
+waffle_toast,same domain + group
+waffle_cereal,same domain + group
+waffle_muffin,same domain + group
+bagel_toast,same domain + group
+bagel_cereal,same domain + group
+bagel_muffin,same domain + group
+toast_cereal,same domain + group
+toast_muffin,same domain + group
+cereal_muffin,same domain + group

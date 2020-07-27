@@ -1,0 +1,46 @@
+pair,within_domain
+tiger_bear,same domain + group
+tiger_giraffe,same domain + group
+tiger_kangaroo,same domain + group
+tiger_gorilla,same domain + group
+tiger_cow,same domain
+tiger_sheep,same domain
+tiger_rabbit,same domain
+tiger_horse,same domain
+tiger_pig,same domain
+bear_giraffe,same domain + group
+bear_kangaroo,same domain + group
+bear_gorilla,same domain + group
+bear_cow,same domain
+bear_sheep,same domain
+bear_rabbit,same domain
+bear_horse,same domain
+bear_pig,same domain
+giraffe_kangaroo,same domain + group
+giraffe_gorilla,same domain + group
+giraffe_cow,same domain
+giraffe_sheep,same domain
+giraffe_rabbit,same domain
+giraffe_horse,same domain
+giraffe_pig,same domain
+kangaroo_gorilla,same domain + group
+kangaroo_cow,same domain
+kangaroo_sheep,same domain
+kangaroo_rabbit,same domain
+kangaroo_horse,same domain
+kangaroo_pig,same domain
+gorilla_cow,same domain
+gorilla_sheep,same domain
+gorilla_rabbit,same domain
+gorilla_horse,same domain
+gorilla_pig,same domain
+cow_sheep,same domain + group
+cow_rabbit,same domain + group
+cow_horse,same domain + group
+cow_pig,same domain + group
+sheep_rabbit,same domain + group
+sheep_horse,same domain + group
+sheep_pig,same domain + group
+rabbit_horse,same domain + group
+rabbit_pig,same domain + group
+horse_pig,same domain + group

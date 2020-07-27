@@ -1,0 +1,46 @@
+pair,within_domain
+camel_zebra,same domain + group
+camel_hippo,same domain + group
+camel_lion,same domain + group
+camel_elephant,same domain + group
+camel_penguin,same domain
+camel_flamingo,same domain
+camel_peacock,same domain
+camel_parrot,same domain
+camel_owl,same domain
+zebra_hippo,same domain + group
+zebra_lion,same domain + group
+zebra_elephant,same domain + group
+zebra_penguin,same domain
+zebra_flamingo,same domain
+zebra_peacock,same domain
+zebra_parrot,same domain
+zebra_owl,same domain
+hippo_lion,same domain + group
+hippo_elephant,same domain + group
+hippo_penguin,same domain
+hippo_flamingo,same domain
+hippo_peacock,same domain
+hippo_parrot,same domain
+hippo_owl,same domain
+lion_elephant,same domain + group
+lion_penguin,same domain
+lion_flamingo,same domain
+lion_peacock,same domain
+lion_parrot,same domain
+lion_owl,same domain
+elephant_penguin,same domain
+elephant_flamingo,same domain
+elephant_peacock,same domain
+elephant_parrot,same domain
+elephant_owl,same domain
+penguin_flamingo,same domain + group
+penguin_peacock,same domain + group
+penguin_parrot,same domain + group
+penguin_owl,same domain + group
+flamingo_peacock,same domain + group
+flamingo_parrot,same domain + group
+flamingo_owl,same domain + group
+peacock_parrot,same domain + group
+peacock_owl,same domain + group
+parrot_owl,same domain + group

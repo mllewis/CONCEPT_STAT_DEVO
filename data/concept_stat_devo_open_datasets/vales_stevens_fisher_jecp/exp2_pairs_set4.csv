@@ -1,0 +1,46 @@
+pair,within_domain
+pretzels_crackers,same domain + group
+pretzels_popcorn,same domain + group
+pretzels_breadsticks,same domain + group
+pretzels_granolabar,same domain + group
+pretzels_peas,same domain
+pretzels_babycarrots,same domain
+pretzels_cherrytomatoes,same domain
+pretzels_grapes,same domain
+pretzels_apple,same domain
+crackers_popcorn,same domain + group
+crackers_breadsticks,same domain + group
+crackers_granolabar,same domain + group
+crackers_peas,same domain
+crackers_babycarrots,same domain
+crackers_cherrytomatoes,same domain
+crackers_grapes,same domain
+crackers_apple,same domain
+popcorn_breadsticks,same domain + group
+popcorn_granolabar,same domain + group
+popcorn_peas,same domain
+popcorn_babycarrots,same domain
+popcorn_cherrytomatoes,same domain
+popcorn_grapes,same domain
+popcorn_apple,same domain
+breadsticks_granolabar,same domain + group
+breadsticks_peas,same domain
+breadsticks_babycarrots,same domain
+breadsticks_cherrytomatoes,same domain
+breadsticks_grapes,same domain
+breadsticks_apple,same domain
+granolabar_peas,same domain
+granolabar_babycarrots,same domain
+granolabar_cherrytomatoes,same domain
+granolabar_grapes,same domain
+granolabar_apple,same domain
+peas_babycarrots,same domain + group
+peas_cherrytomatoes,same domain + group
+peas_grapes,same domain + group
+peas_apple,same domain + group
+babycarrots_cherrytomatoes,same domain + group
+babycarrots_grapes,same domain + group
+babycarrots_apple,same domain + group
+cherrytomatoes_grapes,same domain + group
+cherrytomatoes_apple,same domain + group
+grapes_apple,same domain + group

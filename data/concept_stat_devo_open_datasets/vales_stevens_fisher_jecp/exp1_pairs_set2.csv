@@ -1,0 +1,154 @@
+pair,relation_type,across_domain,within_domain,context
+cow_chicken,same domain + context,within,same domain + context,same context
+cow_pig,same domain + context,within,same domain + context,same context
+cow_mouse,same domain,within,same domain,different context
+cow_butterfly,same domain,within,same domain,different context
+cow_penguin,same domain,within,same domain,different context
+cow_watering can,same context,between,NA,same context
+cow_wheelbarrow ,same context,between,NA,same context
+cow_shovel,same context,between,NA,same context
+cow_broom,different domain,between,NA,different context
+cow_scissors,different domain,between,NA,different context
+cow_hammer,different domain,between,NA,different context
+cow_apple,same context,between,NA,same context
+cow_lettuce,same context,between,NA,same context
+cow_corn,same context,between,NA,same context
+cow_pineapple,different domain,between,NA,different context
+cow_mushroom,different domain,between,NA,different context
+cow_walnut,different domain,between,NA,different context
+chicken_pig,same domain + context,within,same domain + context,same context
+chicken_mouse,same domain,within,same domain,different context
+chicken_butterfly,same domain,within,same domain,different context
+chicken_penguin,same domain,within,same domain,different context
+chicken_watering can,same context,between,NA,same context
+chicken_wheelbarrow ,same context,between,NA,same context
+chicken_shovel,same context,between,NA,same context
+chicken_broom,different domain,between,NA,different context
+chicken_scissors,different domain,between,NA,different context
+chicken_hammer,different domain,between,NA,different context
+chicken_apple,same context,between,NA,same context
+chicken_lettuce,same context,between,NA,same context
+chicken_corn,same context,between,NA,same context
+chicken_pineapple,different domain,between,NA,different context
+chicken_mushroom,different domain,between,NA,different context
+chicken_walnut,different domain,between,NA,different context
+pig_mouse,same domain,within,same domain,different context
+pig_butterfly,same domain,within,same domain,different context
+pig_penguin,same domain,within,same domain,different context
+pig_watering can,same context,between,NA,same context
+pig_wheelbarrow ,same context,between,NA,same context
+pig_shovel,same context,between,NA,same context
+pig_broom,different domain,between,NA,different context
+pig_scissors,different domain,between,NA,different context
+pig_hammer,different domain,between,NA,different context
+pig_apple,same context,between,NA,same context
+pig_lettuce,same context,between,NA,same context
+pig_corn,same context,between,NA,same context
+pig_pineapple,different domain,between,NA,different context
+pig_mushroom,different domain,between,NA,different context
+pig_walnut,different domain,between,NA,different context
+mouse_butterfly,same domain,within,same domain,different context
+mouse_penguin,same domain,within,same domain,different context
+mouse_watering can,different domain,between,NA,different context
+mouse_wheelbarrow ,different domain,between,NA,different context
+mouse_shovel,different domain,between,NA,different context
+mouse_broom,different domain,between,NA,different context
+mouse_scissors,different domain,between,NA,different context
+mouse_hammer,different domain,between,NA,different context
+mouse_apple,different domain,between,NA,different context
+mouse_lettuce,different domain,between,NA,different context
+mouse_corn,different domain,between,NA,different context
+mouse_pineapple,different domain,between,NA,different context
+mouse_mushroom,different domain,between,NA,different context
+mouse_walnut,different domain,between,NA,different context
+butterfly_penguin,same domain,within,same domain,different context
+butterfly_watering can,different domain,between,NA,different context
+butterfly_wheelbarrow ,different domain,between,NA,different context
+butterfly_shovel,different domain,between,NA,different context
+butterfly_broom,different domain,between,NA,different context
+butterfly_scissors,different domain,between,NA,different context
+butterfly_hammer,different domain,between,NA,different context
+butterfly_apple,different domain,between,NA,different context
+butterfly_lettuce,different domain,between,NA,different context
+butterfly_corn,different domain,between,NA,different context
+butterfly_pineapple,different domain,between,NA,different context
+butterfly_mushroom,different domain,between,NA,different context
+butterfly_walnut,different domain,between,NA,different context
+penguin_watering can,different domain,between,NA,different context
+penguin_wheelbarrow ,different domain,between,NA,different context
+penguin_shovel,different domain,between,NA,different context
+penguin_broom,different domain,between,NA,different context
+penguin_scissors,different domain,between,NA,different context
+penguin_hammer,different domain,between,NA,different context
+penguin_apple,different domain,between,NA,different context
+penguin_lettuce,different domain,between,NA,different context
+penguin_corn,different domain,between,NA,different context
+penguin_pineapple,different domain,between,NA,different context
+penguin_mushroom,different domain,between,NA,different context
+penguin_walnut,different domain,between,NA,different context
+watering can_wheelbarrow ,same domain + context,within,same domain + context,same context
+watering can_shovel,same domain + context,within,same domain + context,same context
+watering can_broom,same domain,within,same domain,different context
+watering can_scissors,same domain,within,same domain,different context
+watering can_hammer,same domain,within,same domain,different context
+watering can_apple,same context,between,NA,same context
+watering can_lettuce,same context,between,NA,same context
+watering can_corn,same context,between,NA,same context
+watering can_pineapple,different domain,between,NA,different context
+watering can_mushroom,different domain,between,NA,different context
+watering can_walnut,different domain,between,NA,different context
+wheelbarrow _shovel,same domain + context,within,same domain + context,same context
+wheelbarrow _broom,same domain,within,same domain,different context
+wheelbarrow _scissors,same domain,within,same domain,different context
+wheelbarrow _hammer,same domain,within,same domain,different context
+wheelbarrow _apple,same context,between,NA,same context
+wheelbarrow _lettuce,same context,between,NA,same context
+wheelbarrow _corn,same context,between,NA,same context
+wheelbarrow _pineapple,different domain,between,NA,different context
+wheelbarrow _mushroom,different domain,between,NA,different context
+wheelbarrow _walnut,different domain,between,NA,different context
+shovel_broom,same domain,within,same domain,different context
+shovel_scissors,same domain,within,same domain,different context
+shovel_hammer,same domain,within,same domain,different context
+shovel_apple,same context,between,NA,same context
+shovel_lettuce,same context,between,NA,same context
+shovel_corn,same context,between,NA,same context
+shovel_pineapple,different domain,between,NA,different context
+shovel_mushroom,different domain,between,NA,different context
+shovel_walnut,different domain,between,NA,different context
+broom_scissors,same domain,within,same domain,different context
+broom_hammer,same domain,within,same domain,different context
+broom_apple,different domain,between,NA,different context
+broom_lettuce,different domain,between,NA,different context
+broom_corn,different domain,between,NA,different context
+broom_pineapple,different domain,between,NA,different context
+broom_mushroom,different domain,between,NA,different context
+broom_walnut,different domain,between,NA,different context
+scissors_hammer,same domain,within,same domain,different context
+scissors_apple,different domain,between,NA,different context
+scissors_lettuce,different domain,between,NA,different context
+scissors_corn,different domain,between,NA,different context
+scissors_pineapple,different domain,between,NA,different context
+scissors_mushroom,different domain,between,NA,different context
+scissors_walnut,different domain,between,NA,different context
+hammer_apple,different domain,between,NA,different context
+hammer_lettuce,different domain,between,NA,different context
+hammer_corn,different domain,between,NA,different context
+hammer_pineapple,different domain,between,NA,different context
+hammer_mushroom,different domain,between,NA,different context
+hammer_walnut,different domain,between,NA,different context
+apple_lettuce,same domain + context,within,same domain + context,same context
+apple_corn,same domain + context,within,same domain + context,same context
+apple_pineapple,same domain,within,same domain,different context
+apple_mushroom,same domain,within,same domain,different context
+apple_walnut,same domain,within,same domain,different context
+lettuce_corn,same domain + context,within,same domain + context,same context
+lettuce_pineapple,same domain,within,same domain,different context
+lettuce_mushroom,same domain,within,same domain,different context
+lettuce_walnut,same domain,within,same domain,different context
+corn_pineapple,same domain,within,same domain,different context
+corn_mushroom,same domain,within,same domain,different context
+corn_walnut,same domain,within,same domain,different context
+pineapple_mushroom,same domain,within,same domain,different context
+pineapple_walnut,same domain,within,same domain,different context
+mushroom_walnut,same domain,within,same domain,different context

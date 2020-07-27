@@ -1,0 +1,154 @@
+pair,relation_type,across_domain,within_domain,context
+boots_cat,different domain,between,NA,different context
+boots_crab,different domain,between,NA,different context
+boots_dolphin,different domain,between,NA,different context
+boots_flamingo,different domain,between,NA,different context
+boots_hotdog,different domain,between,NA,different context
+boots_ice cream,different domain,between,NA,different context
+boots_onion,different domain,between,NA,different context
+boots_owl,different domain,between,NA,different context
+boots_pajamas,same domain,within,same domain,different context
+boots_pumpkin,different domain,between,NA,different context
+boots_sandals,same domain,within,same domain,different context
+boots_scarf,same domain,within,same domain,different context
+boots_shorts,same domain,within,same domain,different context
+boots_spaghetti,different domain,between,NA,different context
+boots_sunglasses,same domain,within,same domain,different context
+boots_turtle,different domain,between,NA,different context
+boots_watermelon,different domain,between,NA,different context
+cat_crab,same domain,within,same domain,different context
+cat_dolphin,same domain,within,same domain,different context
+cat_flamingo,same domain,within,same domain,different context
+cat_hotdog,different domain,between,NA,different context
+cat_ice cream,different domain,between,NA,different context
+cat_onion,different domain,between,NA,different context
+cat_owl,same domain,within,same domain,different context
+cat_pajamas,different domain,between,NA,different context
+cat_pumpkin,different domain,between,NA,different context
+cat_sandals,different domain,between,NA,different context
+cat_scarf,different domain,between,NA,different context
+cat_shorts,different domain,between,NA,different context
+cat_spaghetti,different domain,between,NA,different context
+cat_sunglasses,different domain,between,NA,different context
+cat_turtle,same domain,within,same domain,different context
+cat_watermelon,different domain,between,NA,different context
+crab_dolphin,same domain + context,within,same domain + context,same context
+crab_flamingo,same domain + context,within,same domain + context,same context
+crab_hotdog,same context,between,NA,same context
+crab_ice cream,same context,between,NA,same context
+crab_onion,different domain,between,NA,different context
+crab_owl,same domain,within,same domain,different context
+crab_pajamas,different domain,between,NA,different context
+crab_pumpkin,different domain,between,NA,different context
+crab_sandals,same context,between,NA,same context
+crab_scarf,different domain,between,NA,different context
+crab_shorts,same context,between,NA,same context
+crab_spaghetti,different domain,between,NA,different context
+crab_sunglasses,same context,between,NA,same context
+crab_turtle,same domain,within,same domain,different context
+crab_watermelon,same context,between,NA,same context
+dolphin_flamingo,same domain + context,within,same domain + context,same context
+dolphin_hotdog,same context,between,NA,same context
+dolphin_ice cream,same context,between,NA,same context
+dolphin_onion,different domain,between,NA,different context
+dolphin_owl,same domain,within,same domain,different context
+dolphin_pajamas,different domain,between,NA,different context
+dolphin_pumpkin,different domain,between,NA,different context
+dolphin_sandals,same context,between,NA,same context
+dolphin_scarf,different domain,between,NA,different context
+dolphin_shorts,same context,between,NA,same context
+dolphin_spaghetti,different domain,between,NA,different context
+dolphin_sunglasses,same context,between,NA,same context
+dolphin_turtle,same domain,within,same domain,different context
+dolphin_watermelon,same context,between,NA,same context
+flamingo_hotdog,same context,between,NA,same context
+flamingo_ice cream,same context,between,NA,same context
+flamingo_onion,different domain,between,NA,different context
+flamingo_owl,same domain,within,same domain,different context
+flamingo_pajamas,different domain,between,NA,different context
+flamingo_pumpkin,different domain,between,NA,different context
+flamingo_sandals,same context,between,NA,same context
+flamingo_scarf,different domain,between,NA,different context
+flamingo_shorts,same context,between,NA,same context
+flamingo_spaghetti,different domain,between,NA,different context
+flamingo_sunglasses,same context,between,NA,same context
+flamingo_turtle,same domain,within,same domain,different context
+flamingo_watermelon,same context,between,NA,same context
+hotdog_ice cream,same domain + context,within,same domain + context,same context
+hotdog_onion,same domain,within,same domain,different context
+hotdog_owl,different domain,between,NA,different context
+hotdog_pajamas,different domain,between,NA,different context
+hotdog_pumpkin,same domain,within,same domain,different context
+hotdog_sandals,same context,between,NA,same context
+hotdog_scarf,different domain,between,NA,different context
+hotdog_shorts,same context,between,NA,same context
+hotdog_spaghetti,same domain,within,same domain,different context
+hotdog_sunglasses,same context,between,NA,same context
+hotdog_turtle,different domain,between,NA,different context
+hotdog_watermelon,same domain + context,within,same domain + context,same context
+ice cream_onion,same domain,within,same domain,different context
+ice cream_owl,different domain,between,NA,different context
+ice cream_pajamas,different domain,between,NA,different context
+ice cream_pumpkin,same domain,within,same domain,different context
+ice cream_sandals,same context,between,NA,same context
+ice cream_scarf,different domain,between,NA,different context
+ice cream_shorts,same context,between,NA,same context
+ice cream_spaghetti,same domain,within,same domain,different context
+ice cream_sunglasses,same context,between,NA,same context
+ice cream_turtle,different domain,between,NA,different context
+ice cream_watermelon,same domain + context,within,same domain + context,same context
+onion_owl,different domain,between,NA,different context
+onion_pajamas,different domain,between,NA,different context
+onion_pumpkin,same domain,within,same domain,different context
+onion_sandals,different domain,between,NA,different context
+onion_scarf,different domain,between,NA,different context
+onion_shorts,different domain,between,NA,different context
+onion_spaghetti,same domain,within,same domain,different context
+onion_sunglasses,different domain,between,NA,different context
+onion_turtle,different domain,between,NA,different context
+onion_watermelon,same domain,within,same domain,different context
+owl_pajamas,different domain,between,NA,different context
+owl_pumpkin,different domain,between,NA,different context
+owl_sandals,different domain,between,NA,different context
+owl_scarf,different domain,between,NA,different context
+owl_shorts,different domain,between,NA,different context
+owl_spaghetti,different domain,between,NA,different context
+owl_sunglasses,different domain,between,NA,different context
+owl_turtle,same domain,within,same domain,different context
+owl_watermelon,different domain,between,NA,different context
+pajamas_pumpkin,different domain,between,NA,different context
+pajamas_sandals,same domain,within,same domain,different context
+pajamas_scarf,same domain,within,same domain,different context
+pajamas_shorts,same domain,within,same domain,different context
+pajamas_spaghetti,different domain,between,NA,different context
+pajamas_sunglasses,same domain,within,same domain,different context
+pajamas_turtle,different domain,between,NA,different context
+pajamas_watermelon,different domain,between,NA,different context
+pumpkin_sandals,different domain,between,NA,different context
+pumpkin_scarf,different domain,between,NA,different context
+pumpkin_shorts,different domain,between,NA,different context
+pumpkin_spaghetti,same domain,within,same domain,different context
+pumpkin_sunglasses,different domain,between,NA,different context
+pumpkin_turtle,different domain,between,NA,different context
+pumpkin_watermelon,same domain,within,same domain,different context
+sandals_scarf,same domain,within,same domain,different context
+sandals_shorts,same domain + context,within,same domain + context,same context
+sandals_spaghetti,different domain,between,NA,different context
+sandals_sunglasses,same domain + context,within,same domain + context,same context
+sandals_turtle,different domain,between,NA,different context
+sandals_watermelon,same context,between,NA,same context
+scarf_shorts,same domain,within,same domain,different context
+scarf_spaghetti,different domain,between,NA,different context
+scarf_sunglasses,same domain,within,same domain,different context
+scarf_turtle,different domain,between,NA,different context
+scarf_watermelon,different domain,between,NA,different context
+shorts_spaghetti,different domain,between,NA,different context
+shorts_sunglasses,same domain + context,within,same domain + context,same context
+shorts_turtle,different domain,between,NA,different context
+shorts_watermelon,same context,between,NA,same context
+spaghetti_sunglasses,different domain,between,NA,different context
+spaghetti_turtle,different domain,between,NA,different context
+spaghetti_watermelon,same domain,within,same domain,different context
+sunglasses_turtle,different domain,between,NA,different context
+sunglasses_watermelon,same context,between,NA,same context
+turtle_watermelon,different domain,between,NA,different context
